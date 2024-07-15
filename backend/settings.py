@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import socket
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,15 @@ SECRET_KEY = 'django-insecure-)jyyxv*ym^)sdj7m&oj&8c=i%0d#*#a!h8(^^y8h83&luy#ql-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+try:
+    PUBLIC_IP = socket.gethostbyname(socket.gethostname())
+except socket.gaierror:
+    PUBLIC_IP = None
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+if PUBLIC_IP:
+    ALLOWED_HOSTS.append(PUBLIC_IP)
 
 CORS_ALLOWED_ORIGINS = ["http://*"]
 
