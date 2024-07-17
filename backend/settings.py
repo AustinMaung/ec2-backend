@@ -28,7 +28,7 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Replace with your frontend URL during development
-    "http://austinmaung-todolist.s3-website-us-west-1.amazonaws.com/"
+    "http://austinmaung-todolist.s3-website-us-west-1.amazonaws.com"
 ]
 
 # Application definition
