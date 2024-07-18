@@ -29,8 +29,12 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", 
     "http://austinmaung-todolist.s3-website-us-west-1.amazonaws.com",
-    "d2y5oacsr8lox3.cloudfront.net"
+    "https://d2y5oacsr8lox3.cloudfront.net"
 ]
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # Application definition
 
