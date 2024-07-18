@@ -27,14 +27,9 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", 
-    "http://austinmaung-todolist.s3-website-us-west-1.amazonaws.com",
-    "https://d2y5oacsr8lox3.cloudfront.net"
+    "http://localhost:3000",  # Replace with your frontend URL during development
+    "http://austinmaung-todolist.s3-website-us-west-1.amazonaws.com"
 ]
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
 
 # Application definition
 
