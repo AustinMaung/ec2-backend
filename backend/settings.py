@@ -27,8 +27,10 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Replace with your frontend URL during development
+    "http://localhost:3000", 
     "http://austinmaung-todolist.s3-website-us-west-1.amazonaws.com",
+    "d2aj1tqgvsfma1.cloudfront.net"
+
 ]
 
 # Application definition
@@ -41,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'django_extensions',
     'myapp',
 ]
 
